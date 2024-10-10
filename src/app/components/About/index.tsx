@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function About() {
   return (
@@ -12,7 +13,12 @@ export default function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <img src="/images/24.07.24-172.jpg" alt="Profile" className="rounded-full mx-auto drop-shadow-[3px_3px_6px_rgba(0,0,0,0.5)]" width="300" height="300" />
+            <Image
+             src="/images/24.07.24-172.jpg" alt="Profile"
+              className="rounded-full mx-auto drop-shadow-[3px_3px_6px_rgba(0,0,0,0.5)]"
+              width="300" 
+              height="300" 
+             />
           </motion.div>
           <motion.div 
             className="md:w-1/2"
@@ -21,7 +27,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              I'm a passionate web developer with a keen eye for design and a love for creating seamless user experiences. 
+              I&apos;m a passionate web developer with a keen eye for design and a love for creating seamless user experiences. 
               With expertise in modern web technologies, I strive to build applications that not only look great but also 
               perform exceptionally well. My journey in web development has been driven by curiosity and a constant desire 
               to learn and improve.

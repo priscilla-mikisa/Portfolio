@@ -1,13 +1,14 @@
 
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image';
 
 interface Project {
   id: string;
   title: string;
   description: string;
   image: string;
-  demo:any;
+  demo:JSX.Element;
 }
 
 const Projects: React.FC = () => {
@@ -31,7 +32,13 @@ const Projects: React.FC = () => {
               className="bg-gray-100 dark:bg-gray-700 rounded-lg drop-shadow-[3px_3px_6px_rgba(0,0,0,0.5)] overflow-hidden cursor-pointer"
               whileHover={{ scale: 1.03 }}
             >
-              <img src={project.image} alt={project.title} className="w-full h-auto object-cover" />
+              <Image
+               src={project.image}
+                alt={project.title} 
+                width={500}
+                height={500}
+                className="w-full h-auto object-cover"
+                 />
               <div className="p-6">
                 <h3 className="font-bold text-xl mb-2 dark:text-white">{project.title}</h3>
                 <p className="text-gray-700 dark:text-gray-300">{project.description}</p>
