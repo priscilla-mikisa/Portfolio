@@ -11,7 +11,7 @@ export default function Contact() {
   })
   const [status, setStatus] = useState('')
 
-  const handleChange = (e: { target: { name: string; value: string | number } }) => {
+  const handleChange = (e: { target: { name: string; value: string; } }) => {
     const { name, value } = e.target
     setFormData(prevState => ({ ...prevState, [name]: value }))
   }
@@ -104,7 +104,7 @@ export default function Contact() {
                 <textarea
                   id="message"
                   name="message"
-                  rows="4"
+                  rows={4}
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
